@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Node Mailer</h2>
+    <div class="container">
+      <div class="group">
+        <!-- <label>Subject</label> -->
+        <input
+          type="text"
+          placeholder="Subject"
+          name="title"
+          id="title"
+          required
+        />
+      </div>
+      <div class="group">
+        <!-- <label>Email</label> -->
+        <input
+          type="email"
+          placeholder="To Sender Mail id"
+          name="email"
+          id="email"
+          required
+        />
+      </div>
+      <div class="group">
+        <!-- <label>Message</label> -->
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Enter the Message"
+          name="message"
+         required></textarea>
+      </div>
+
+      <div class="group">
+        <button id="button">Send</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
