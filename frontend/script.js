@@ -1,4 +1,6 @@
+
 const button = document.querySelector("#button");
+const inputs = document.querySelectorAll(".input") 
 
 button.addEventListener("click", async () => {
   const backendSender = {
@@ -16,8 +18,15 @@ button.addEventListener("click", async () => {
       },
     });
 
-    const result = await res.text();
-    alert("Result is: " + result);
+    if (res) {
+      const result = await res.json();
+      alert("Result is: " + result.message);
+      inputs.forEach((data)=>{
+        data.value = ""
+      })
+    } else {
+      alert("Failed to send email. Status: " + res.status);
+    }
   } catch (err) {
     console.error(err);
     alert("Error sending email");
